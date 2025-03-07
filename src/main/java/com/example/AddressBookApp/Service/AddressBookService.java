@@ -11,6 +11,7 @@ public interface AddressBookService {
     List<Data> findAll();
     Optional<Data> findById(Long id);
     Data save(Data contact);
+    Data updateContact(Long id, Data addressBook);
     void delete(Data contact);
     }
 

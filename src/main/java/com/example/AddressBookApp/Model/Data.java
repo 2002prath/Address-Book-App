@@ -18,6 +18,11 @@ public class Data {
     {
     }
 
+    public Data(Long id, String name, String phoneNumber) {
+        this.id = id;
+        this.name = name;
+        this.phone = phoneNumber;
+    }
 
 
     public Long getId() {

@@ -42,5 +42,16 @@ public class AddressBookServiceImpl implements AddressBookService {
         dataRepository.delete(contact);
     }
 
+    @Override
+    public Data updateContact(Long id, Data updatedContact) {
+        return findById(id)
+                .map(contact -> {
+                    contact.setName(updatedContact.getName());
+                    contact.setPhone(updatedContact.getPhone());
+                    return contact;
+                })
+                .orElseThrow(() -> new RuntimeException("Contact not found with id: " + id));
+    }
+
 
 }
