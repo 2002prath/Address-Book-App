@@ -14,6 +14,12 @@ public class Data {
     private String phone;
     private String email;
 
+    public Data()
+    {
+    }
+
+
+
     public Long getId() {
         return id;
     }
@@ -45,4 +51,6 @@ public class Data {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
 }
