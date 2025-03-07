@@ -13,7 +13,7 @@ import java.util.*;
 @RestController
 
 @RequestMapping("/contacts")
-class DataController {
+public class DataController {
     @Autowired
     private DataRepository repository;
 
@@ -30,8 +30,9 @@ class DataController {
     }
 
     @PostMapping
-    public ResponseEntity<Data> createContact(@RequestBody Data contact) {
-        return new ResponseEntity<>(repository.save(contact), HttpStatus.CREATED);
+    public ResponseEntity<Data> createContact(@RequestBody Data data)
+    {
+        return new ResponseEntity<>(repository.save(data), HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
